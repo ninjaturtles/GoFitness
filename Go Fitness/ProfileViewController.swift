@@ -270,13 +270,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func openPhotoLibrary () {
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
             let imagePickerController = UIImagePickerController()
             // Make sure ViewController is notified when the user picks an image.
             imagePickerController.allowsEditing = true
             imagePickerController.delegate = self
             present(imagePickerController, animated: true, completion: nil)
-        }
+        
     }
     
     func openCamera() {
